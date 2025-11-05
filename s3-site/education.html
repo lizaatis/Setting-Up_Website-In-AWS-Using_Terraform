@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Education - Elizabeth Atieno</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <div id="header-nav">
+            <div class="container">
+                <nav>
+                    <img src="static/Images/liz.png" class="liz">
+                    <ul class="nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>
+
+        <!-- Education Section -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="static/Images/Data Analysis.jpg" alt="Education">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Education & Certifications</h1>
+                        <p>My educational journey combines formal academic training with intensive professional development programs. This foundation provides the theoretical knowledge and practical skills essential for cybersecurity excellence.</p>
+                        
+                        <p>Through rigorous coursework and hands-on training, I've developed expertise in computer security, digital forensics, and modern cybersecurity practices.</p>
+                        
+                        <p>Continuous learning remains a priority as I pursue advanced certifications and stay current with evolving security technologies and methodologies.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('formal')">Formal Education</p>
+                            <p class="tab-links" onclick="opentab('professional')">Professional Training</p>
+                            <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="formal">
+                            <ul>
+                                <li><span>Bachelor of Science - Computer Science</span><br>Computer Security and Forensics (2016-2020)<br>Comprehensive program covering operating system security, access control, software development, and vulnerability analysis.</li>
+                                <li><span>Core Coursework</span><br>Database Management (SQL), Risk Management, Software Development (Java, PHP, HTML), Network Security</li>
+                                <li><span>Academic Achievements</span><br>Strong foundation in cybersecurity principles, hands-on laboratory experience, collaborative project work</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="professional">
+                            <ul>
+                                <li><span>Cybersecurity Bootcamp</span><br>Year Up United / Seattle Central College (2024)<br>Intensive 6-month program with 250 corporate partners, featuring practical labs and real-world simulations.</li>
+                                <li><span>Technical Training</span><br>Hands-on experience with Wireshark, Metasploit, Nessus<br>Network security, ethical hacking, incident response, cloud security</li>
+                                <li><span>Professional Development</span><br>Communication skills, business acumen, corporate partnership internship program</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="certifications">
+                            <ul>
+                                <li><span>CompTIA Security+</span><br>2024<br>Industry-standard certification covering network security, compliance, threats and vulnerabilities</li>
+                                <li><span>Google Cybersecurity Certificate</span><br>2023<br>Comprehensive program covering security frameworks, incident response, and security tools</li>
+                                <li><span>Introduction to AWS</span><br>2023<br>Cloud security fundamentals and AWS security services implementation</li>
+                                <li><span>Leadership Skills Certification</span><br>2023<br>Professional development in team leadership and project management</li>
+                                <li><span>Communication Skills Certification</span><br>2023<br>Advanced technical communication and presentation skills</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.target.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>

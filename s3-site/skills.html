@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skills - Elizabeth Atieno</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <div id="header-nav">
+            <div class="container">
+                <nav>
+                    <img src="static/Images/liz.png" class="liz">
+                    <ul class="nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>
+
+        <!-- Skills Section -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="static/Images/Cybersec.jpg" alt="Skills">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">My Skills</h1>
+                        <p>Technical expertise and professional capabilities developed through years of experience in cybersecurity, programming, and technology innovation. These skills enable me to deliver comprehensive security solutions and drive organizational success.</p>
+                        
+                        <p>From advanced threat detection to full-stack development, my diverse skill set allows me to approach cybersecurity challenges from multiple angles and implement robust, scalable solutions.</p>
+                        
+                        <p>I continuously expand my technical arsenal to stay ahead of emerging threats and technological advancements in the rapidly evolving cybersecurity landscape.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('technical')">Technical Skills</p>
+                            <p class="tab-links" onclick="opentab('programming')">Coding Skills</p>
+                            <p class="tab-links" onclick="opentab('tools')">Tools & Platforms</p>
+                            <p class="tab-links" onclick="opentab('soft')">Soft Skills</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="technical">
+                            <ul>
+                                <li><span>Network Security</span><br>Advanced firewall configuration, network monitoring, and intrusion detection systems</li>
+                                <li><span>Cloud Security</span><br>AWS, GCP, Microsoft Azure - Multi-cloud security architecture and implementation</li>
+                                <li><span>Threat Analysis & Detection</span><br>Advanced threat hunting, behavioral analysis, and real-time threat identification</li>
+                                <li><span>Vulnerability Assessment</span><br>Comprehensive security audits, penetration testing, and vulnerability remediation</li>
+                                <li><span>Identity & Access Management (IAM)</span><br>RBAC implementation, policy development, and access control systems</li>
+                                <li><span>Incident Response & Detection</span><br>Security incident handling, forensic analysis, and automated response development</li>
+                                <li><span>Penetration Testing</span><br>Ethical hacking, security assessments, and vulnerability exploitation testing</li>
+                                <li><span>SIEM Systems</span><br>Security Information and Event Management - Log analysis and threat correlation</li>
+                                <li><span>Cryptography & Risk Management</span><br>Encryption protocols, digital signatures, and comprehensive risk assessment frameworks</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="programming">
+                            <ul>
+                                <li><span>Python</span><br>Security automation, data analysis, backend development, and scripting solutions</li>
+                                <li><span>Java</span><br>Enterprise-grade applications, security frameworks, and robust system development</li>
+                                <li><span>C++</span><br>System-level programming, performance optimization, and low-level security tools</li>
+                                <li><span>JavaScript</span><br>Frontend development, web applications, and interactive security dashboards</li>
+                                <li><span>HTML/CSS</span><br>Modern web design, responsive interfaces, and professional web presence</li>
+                                <li><span>SQL</span><br>Database management, security queries, and data analysis for threat intelligence</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="tools">
+                            <ul>
+                                <li><span>Infrastructure as Code</span><br>Terraform - Automated infrastructure deployment and configuration management</li>
+                                <li><span>Container Orchestration</span><br>Kubernetes - Container security, cluster management, and microservices architecture</li>
+                                <li><span>Message Streaming</span><br>Apache Kafka - Real-time data processing and security event streaming</li>
+                                <li><span>Containerization</span><br>Docker - Secure container deployment and application isolation</li>
+                                <li><span>Microsoft 365 Suite</span><br>Excel, Word, PowerPoint - Advanced data analysis and professional documentation</li>
+                                <li><span>Version Control</span><br>GitHub/Git CLI - Collaborative development and secure code management</li>
+                                <li><span>Build Automation</span><br>Make - Automated build processes and development workflow optimization</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="soft">
+                            <ul>
+                                <li><span>Leadership</span><br>Team management, project coordination, and strategic decision-making in cybersecurity initiatives</li>
+                                <li><span>Problem Solving</span><br>Analytical thinking, root cause analysis, and innovative solution development for complex security challenges</li>
+                                <li><span>Collaboration</span><br>Cross-functional teamwork, stakeholder engagement, and effective partnership building</li>
+                                <li><span>Communication</span><br>Technical writing, presentation skills, and ability to translate complex security concepts for diverse audiences</li>
+                                <li><span>Adaptability</span><br>Rapid learning, flexibility in evolving threat landscapes, and quick adaptation to new technologies</li>
+                                <li><span>Critical Thinking</span><br>Strategic analysis, risk assessment, and evidence-based decision making in high-pressure situations</li>
+                                <li><span>Attention to Detail</span><br>Meticulous security analysis, thorough documentation, and precision in vulnerability identification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.target.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>            

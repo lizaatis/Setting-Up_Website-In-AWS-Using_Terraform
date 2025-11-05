@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About - Elizabeth Atieno</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <div id="header-nav">
+            <div class="container">
+                <nav>
+                    <img src="static/Images/liz.png" class="liz">
+                    <ul class="nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>
+
+        <!-- About Section -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="static/Images/logo.jpeg" alt="Elizabeth Atieno">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>A visionary and motivated Cybersecurity Analyst committed to detecting and protecting individuals and organizations from cyberattacks through innovative techniques and programming skills. My education and prior work experience equip me to contribute effectively by bringing valuable solutions within the cybersecurity industry.</p>
+                        
+                        <p>With a strong foundation in cybersecurity principles and practices, I am dedicated to staying ahead of emerging threats and vulnerabilities. My goal is to leverage my skills to enhance the security posture of organizations and ensure the safety of their digital assets.</p>
+                        
+                        <p>As a proactive learner, I continuously seek opportunities to expand my knowledge and expertise in the ever-evolving field of cybersecurity. I am passionate about making a positive impact in the industry.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Cybersecurity</span><br>Threat Detection & Analysis, Incident Response</li>
+                                <li><span>Programming</span><br>Python, Go, JavaScript, HTML/CSS</li>
+                                <li><span>Web Development</span><br>Full-stack Development, Backend Systems</li>
+                                <li><span>Data Analysis</span><br>Security Analytics & Reporting</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Cybersecurity Analyst</span><br>Threat detection, vulnerability assessment, and incident response</li>
+                                <li><span>Security Research</span><br>Analyzing emerging threats and security trends</li>
+                                <li><span>Web Development</span><br>Building secure web applications and portfolio projects</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Cybersecurity Certification</span><br>Advanced cybersecurity principles and practices</li>
+                                <li><span>Programming Courses</span><br>Multiple programming languages and frameworks</li>
+                                <li><span>Continuous Learning</span><br>Staying updated with latest security trends and technologies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.target.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>    

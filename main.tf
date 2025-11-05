@@ -24,7 +24,7 @@ resource "aws_s3_bucket_website_configuration" "website" {
 }
 # Upload frontend files to S3 bucket
 locals {
-  frontend_dir = "${path.module}/../scr/s3-site"
+  frontend_dir = "${path.module}/s3-site"
 }
 
 resource "aws_s3_object" "frontend_files" {

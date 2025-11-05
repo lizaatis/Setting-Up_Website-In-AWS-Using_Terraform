@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experience - Elizabeth Atieno</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <div id="header-nav">
+            <div class="container">
+                <nav>
+                    <img src="static/Images/liz.png" class="liz">
+                    <ul class="nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>
+
+        <!-- Experience Section -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="static/Images/IT.jpg" alt="Professional Experience">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Professional Experience</h1>
+                        <p>My cybersecurity journey spans multiple industries and roles, from healthcare security to government infrastructure protection. Each position has strengthened my expertise in threat detection, vulnerability assessment, and security automation.</p>
+                        
+                        <p>Through hands-on experience with cutting-edge security tools and technologies, I've developed a comprehensive understanding of modern cybersecurity challenges and solutions.</p>
+                        
+                        <p>My diverse background enables me to approach security from multiple perspectives, ensuring robust protection strategies for any organization.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('current')">Current Role</p>
+                            <p class="tab-links" onclick="opentab('previous')">Previous Roles</p>
+                            <p class="tab-links" onclick="opentab('leadership')">Leadership</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="current">
+                            <ul>
+                                <li><span>Cybersecurity Engineer - Reddit</span><br>March 2024 - Present<br>Automates cloud tasks using Bash and Python scripts, cutting manual workload by 98%. Develops 30+ IAM roles using Terraform, reducing unauthorized access by 45%.</li>
+                                <li><span>Healthcare Security Specialist</span><br>August 2024 - Present<br>Monitors 60 residents, reducing drug overdose incidents by 37%. Manages HIPAA-compliant systems with 99% call response rate.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="previous">
+                            <ul>
+                                <li><span>Cybersecurity Analyst - CAK</span><br>August 2023 - August 2024<br>Conducted vulnerability assessments, identifying 150+ security vulnerabilities. Implemented SIEM solutions reducing incident response time by 30%.</li>
+                                <li><span>IT Support Specialist - KRA</span><br>January 2021 - December 2021<br>Resolved 3,000+ tickets monthly, improving IT response time by 95%. Maintained security updates decreasing vulnerability exposure by 33%.</li>
+                                <li><span>QA Specialist - Ventec Life Systems</span><br>May 2019 - August 2019<br>Maintained ISO compliance on 1,300+ monthly medical devices. Collaborated with 70-member team on critical projects.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="leadership">
+                            <ul>
+                                <li><span>Project Lead - Enactus JOOUST</span><br>2017 - 2020<br>Led entrepreneurial projects serving low-income clients, enhancing community welfare through innovative solutions.</li>
+                                <li><span>President - UNESCO Student Forum</span><br>2017 - 2020<br>Organized educational and cultural programs, fostering international understanding and cooperation.</li>
+                                <li><span>Team Leadership</span><br>Ongoing<br>Experience leading cross-functional teams, managing security projects, and mentoring junior professionals.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.target.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>    

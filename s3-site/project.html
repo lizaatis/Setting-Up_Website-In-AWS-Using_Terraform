@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects - Elizabeth Atieno</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <div id="header-nav">
+            <div class="container">
+                <nav>
+                    <img src="static/Images/liz.png" class="liz">
+                    <ul class="nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>
+
+        <!-- Projects Section -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="static/Images/Project.jpg" alt="Projects">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">My Projects</h1>
+                        <p>A comprehensive portfolio showcasing my expertise in cybersecurity, programming, and technology innovation. These projects demonstrate practical application of security principles and technical skills.</p>
+                        
+                        <p>From SIEM implementations to cloud infrastructure, each project reflects my commitment to delivering robust, scalable security solutions.</p>
+                        
+                        <p>As a <a href="https://www.youtube.com/@lizatis9381" target="_blank" style="color: #ff6b6b;">YouTuber</a>, I also share knowledge and insights with the cybersecurity community.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('cybersecurity')">Cybersecurity</p>
+                            <p class="tab-links" onclick="opentab('programming')">Programming</p>
+                            <p class="tab-links" onclick="opentab('networking')">Networking</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="cybersecurity">
+                            <ul>
+                                <li><span>Microsoft Sentinel SIEM</span><br>Comprehensive SIEM configuration for threat detection and incident response<br><a href="https://www.canva.com/design/DAGdE6YuAew/LV1L4WqGaVjAIDg2tm25nA/edit" target="_blank" style="color: #feca57;">View Project</a></li>
+                                <li><span>AWS Database Server</span><br>Secure database implementation on AWS with security best practices<br><a href="https://github.com/lizaatis/Database-Server-on-AWS" target="_blank" style="color: #feca57;">GitHub Repository</a></li>
+                                <li><span>Professional Certifications</span><br>CompTIA Security+, Google Cybersecurity Certificate, AWS credentials<br><a href="https://github.com/lizaatis/Certifications" target="_blank" style="color: #feca57;">View Certifications</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="programming">
+                            <ul>
+                                <li><span>Python Data Fetching</span><br>Internet data fetching application with error handling and validation<br><a href="https://github.com/lizaatis/Fetching-Internet-Data-using-Python" target="_blank" style="color: #feca57;">GitHub Repository</a></li>
+                                <li><span>IT Help Desk Labs</span><br>Comprehensive lab projects from CNS 6-month course<br><a href="https://github.com/lizaatis/Lab_Projects_CNS_course" target="_blank" style="color: #feca57;">GitHub Repository</a></li>
+                                <li><span>Excel Functions Lab</span><br>Advanced Excel data analysis with pivot tables and visualizations<br><a href="https://github.com/lizaatis/Excel-Functions-Lab/tree/main" target="_blank" style="color: #feca57;">GitHub Repository</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="networking">
+                            <ul>
+                                <li><span>Cisco Packet Tracer</span><br>Network simulation exploring physical and logical network modes<br><a href="https://github.com/lizaatis/exploring-physical-and-logical-mode-of-network-on-Cisco-Packet-Tracer" target="_blank" style="color: #feca57;">GitHub Repository</a></li>
+                                <li><span>Network Security Implementation</span><br>Practical network security configurations and monitoring solutions</li>
+                                <li><span>Cloud Infrastructure</span><br>Multi-cloud security implementations across AWS, GCP, and Azure platforms</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 40px; text-align: center;">
+                            <h3 style="color: #ff6b6b; margin-bottom: 20px;">Connect With Me</h3>
+                            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                <a href="https://github.com/elizabethatieno" target="_blank" style="color: #feca57; text-decoration: none; padding: 10px 20px; border: 1px solid #feca57; border-radius: 20px; transition: all 0.3s ease;">GitHub</a>
+                                <a href="https://www.linkedin.com/in/elizabeth-atieno-202b49173/" target="_blank" style="color: #feca57; text-decoration: none; padding: 10px 20px; border: 1px solid #feca57; border-radius: 20px; transition: all 0.3s ease;">LinkedIn</a>
+                                <a href="https://www.youtube.com/@lizatis9381" target="_blank" style="color: #feca57; text-decoration: none; padding: 10px 20px; border: 1px solid #feca57; border-radius: 20px; transition: all 0.3s ease;">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.target.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+                                <a href="https://github.com/lizaatis/Database-Server-on-AWS" target="_blank" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-category">
+                        <h2>💻 Programming Projects</h2>
+                        <div class="project-item">
+                            <img src="static/Images/Web Development.jpg" alt="Python Project" class="project-image">
+                            <div class="project-content">
+                                <h3>Internet Data Fetching with Python</h3>
+                                <p>Python application for fetching and processing data from various internet sources with error handling and data validation.</p>
+                                <a href="https://github.com/lizaatis/Fetching-Internet-Data-using-Python" target="_blank" class="project-link">View Project</a>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <img src="static/Images/IT.jpg" alt="Lab Projects" class="project-image">
+                            <div class="project-content">
+                                <h3>IT Help Desk Lab Projects</h3>
+                                <p>Comprehensive collection of lab projects from CNS 6-month course covering network troubleshooting and IT support scenarios.</p>
+                                <a href="https://github.com/lizaatis/Lab_Projects_CNS_course" target="_blank" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-category">
+                        <h2>📊 Data Analysis Projects</h2>
+                        <div class="project-item">
+                            <img src="static/Images/Data Analysis.jpg" alt="Excel Analysis" class="project-image">
+                            <div class="project-content">
+                                <h3>Advanced Excel Functions Lab</h3>
+                                <p>Comprehensive Excel data analysis project demonstrating advanced functions, pivot tables, and data visualization techniques.</p>
+                                <a href="https://github.com/lizaatis/Excel-Functions-Lab/tree/main" target="_blank" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-category">
+                        <h2>🌐 Networking Projects</h2>
+                        <div class="project-item">
+                            <img src="static/Images/IT.jpg" alt="Cisco Project" class="project-image">
+                            <div class="project-content">
+                                <h3>Cisco Packet Tracer Network Simulation</h3>
+                                <p>Exploring physical and logical network modes in Cisco Packet Tracer with comprehensive network design and implementation.</p>
+                                <a href="https://github.com/lizaatis/exploring-physical-and-logical-mode-of-network-on-Cisco-Packet-Tracer" target="_blank" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-category">
+                        <h2>📜 Certifications & Achievements</h2>
+                        <div class="project-item">
+                            <img src="static/Images/A.jpg" alt="Certifications" class="project-image">
+                            <div class="project-content">
+                                <h3>Professional Certifications Portfolio</h3>
+                                <p>Collection of industry-standard certifications including CompTIA Security+, Google Cybersecurity Certificate, and AWS credentials.</p>
+                                <a href="https://github.com/lizaatis/Certifications" target="_blank" class="project-link">View Certifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h2>Connect With Me</h2>
+                    <div class="social-buttons">
+                        <a href="https://github.com/elizabethatieno" target="_blank" class="social-btn github">GitHub</a>
+                        <a href="https://www.linkedin.com/in/elizabeth-atieno-202b49173/" target="_blank" class="social-btn linkedin">LinkedIn</a>
+                        <a href="www.youtube.com/@lizatis9381" target="_blank" class="social-btn youtube">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
